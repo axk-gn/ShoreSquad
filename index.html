@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ShoreSquad - Rally your crew and join beach cleanups near you!">
+    <meta name="theme-color" content="#1CA4B8">
+    <title>ShoreSquad - Beach Cleanup Community</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>    <header class="header">
+        <nav class="nav-container" role="navigation" aria-label="Main navigation">
+            <div class="logo" aria-label="ShoreSquad Logo">
+                <i class="fas fa-water"></i>
+                <span>ShoreSquad</span>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#home" aria-current="page"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#map"><i class="fas fa-map-marked-alt"></i> Find Cleanups</a></li>
+                <li><a href="#weather"><i class="fas fa-cloud-sun"></i> Weather</a></li>
+                <li><a href="#community"><i class="fas fa-users"></i> Community</a></li>
+                <li><button class="join-button" aria-label="Join ShoreSquad"><i class="fas fa-user-plus"></i> Sign Up</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <h1>Make Waves of Change</h1>
+                <p class="hero-subtitle">Join the movement to keep our beaches clean and create lasting impact</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="1500">0</span>
+                        <span class="stat-label">Beach Warriors</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="50">0</span>
+                        <span class="stat-label">Active Events</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="2000">0</span>
+                        <span class="stat-label">Kg Waste Collected</span>
+                    </div>
+                </div>
+                <div class="cta-container">
+                    <button class="cta-button primary">Join a Cleanup</button>
+                    <button class="cta-button secondary">Create Event</button>
+                </div>
+            </div>
+            <div class="wave-animation"></div>
+        </section>        <section id="map" class="map-section">
+            <h2>Next Beach Cleanup Location</h2>
+            <div id="map-container">
+                <iframe
+                    width="100%"
+                    height="450"
+                    style="border:0;border-radius:12px;margin-top:20px;"
+                    loading="lazy"
+                    allowfullscreen
+                    referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY
+                        &q=1.381497,103.955574
+                        &zoom=15
+                        &center=1.381497,103.955574
+                        &markers=color:red%7Clabel:C%7C1.381497,103.955574">
+                </iframe>
+                <div class="map-info">
+                    <h3><i class="fas fa-map-marker-alt"></i> Pasir Ris Beach</h3>
+                    <p><i class="fas fa-clock"></i> Next Cleanup: June 15, 2025 at 8:00 AM</p>
+                    <p><i class="fas fa-users"></i> 15 Squad Members Joined</p>
+                    <button class="join-cleanup-btn">Join This Cleanup</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="weather" class="weather-section">
+            <h2>Beach Weather</h2>
+            <div id="weather-container">
+                <!-- Weather data will be inserted here -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 ShoreSquad. Making beaches cleaner, one squad at a time.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
