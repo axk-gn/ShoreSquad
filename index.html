@@ -55,21 +55,7 @@
             </div>
             <div class="wave-animation"></div>
         </section>        <section id="map" class="map-section">
-            <h2>Next Beach Cleanup Location</h2>
-            <div id="map-container">
-                <iframe
-                    width="100%"
-                    height="450"
-                    style="border:0;border-radius:12px;margin-top:20px;"
-                    loading="lazy"
-                    allowfullscreen
-                    referrerpolicy="no-referrer-when-downgrade"
-                    src="https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY
-                        &q=1.381497,103.955574
-                        &zoom=15
-                        &center=1.381497,103.955574
-                        &markers=color:red%7Clabel:C%7C1.381497,103.955574">
-                </iframe>
+            <h2>Next Beach Cleanup Location</h2>            <div id="map-container">                <div id="map" style="width:100%;height:600px;border-radius:12px;margin-top:20px;"></div>
                 <div class="map-info">
                     <h3><i class="fas fa-map-marker-alt"></i> Pasir Ris Beach</h3>
                     <p><i class="fas fa-clock"></i> Next Cleanup: June 15, 2025 at 8:00 AM</p>
@@ -77,12 +63,19 @@
                     <button class="join-cleanup-btn">Join This Cleanup</button>
                 </div>
             </div>
-        </section>
-
-        <section id="weather" class="weather-section">
-            <h2>Beach Weather</h2>
-            <div id="weather-container">
-                <!-- Weather data will be inserted here -->
+        </section>        <section id="weather" class="weather-section">
+            <h2>Beach Weather Forecast</h2>
+            <div id="weather-container" class="weather-grid">
+                <div class="weather-loading">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Loading weather data...</p>
+                </div>
+            </div>
+            <div class="weather-location">
+                <p><i class="fas fa-map-marker-alt"></i> Pasir Ris Beach Area</p>
+            </div>
+            <div class="weather-footer">
+                <small>Data provided by NEA</small>
             </div>
         </section>
     </main>
@@ -91,8 +84,8 @@
         <div class="footer-content">
             <p>&copy; 2025 ShoreSquad. Making beaches cleaner, one squad at a time.</p>
         </div>
-    </footer>
-
-    <script src="js/app.js"></script>
+    </footer>    <script src="js/app.js"></script>
+    <!-- Replace YOUR_GOOGLE_MAPS_API_KEY with your actual API key -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgs9vKarIZoi_2xEf7uPnUTG5hbQ3bMrI&callback=initializeMap" async defer></script>
 </body>
 </html>
